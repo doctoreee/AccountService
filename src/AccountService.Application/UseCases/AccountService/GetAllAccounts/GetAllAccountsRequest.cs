@@ -1,5 +1,4 @@
-﻿using AccountService.Application.Interfaces;
-using MediatR;
+﻿using MediatR;
 
 namespace AccountService.Application.UseCases.AccountService.GetAccount;
 

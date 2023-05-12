@@ -1,24 +1,23 @@
 ﻿using AccountService.Application.Wrappers;
 
-namespace AccountService.API.Wrappers
+namespace AccountService.API.Wrappers;
+
+public static class ResponseBaseExtensions
 {
-    public static class ResponseBaseExtensions
+    public static ApiResponse ToApiResponse(this ResponseBase responseBase)
     {
-        public static ApiResponse ToApiResponse(this ResponseBase responseBase)
+        return new()
         {
-            return new()
-            {
-                Success = true,
-                Data = responseBase,
-                Messages = responseBase.Message == default
-                    ? null
-                    : new List<ApiResponseMessage> { new ApiResponseMessage
-                    {
-                        Code = responseBase.Code,
-                        Message = responseBase.Message
-                        }
+            Success = true,
+            Data = responseBase,
+            Messages = responseBase.Message == default
+                ? null
+                : new List<ApiResponseMessage> { new ApiResponseMessage
+                {
+                    Code = responseBase.Code,
+                    Message = responseBase.Message
                     }
-            };
-        }
+                }
+        };
     }
 }

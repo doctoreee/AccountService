@@ -1,10 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace AccountService.API.Models.Request
+namespace AccountService.API.Models.Request;
+
+public class AccountBaseModel
 {
-    public class AccountBaseModel
-    {
-        [FromQuery]
-        public int Id { get; set; }
-    }
+    public int Id { get; set; }
 }

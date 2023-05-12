@@ -1,5 +1,4 @@
-﻿using AccountService.Domain.Entities;
-using AccountService.Domain.Exceptions;
+﻿using AccountService.Domain.Exceptions;
 using AccountService.Domain.RepositoryInterfaces.Sqlite;
 using MediatR;
 
